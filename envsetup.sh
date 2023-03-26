@@ -5,6 +5,7 @@ then
     echo "Python virtual environment exists." 
 else
     python3 -m venv env
+    pip3 install flask
 fi
 
 virtualenv .env

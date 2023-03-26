@@ -16,6 +16,14 @@ pipeline {
                 url: 'https://github.com/rajeshkbajaj/Jenkins.git'
                 }
         }
+        stage('Setup Python Virtual ENV'){
+       
+      steps  {
+            sh '''
+            chmod +x envsetup.sh
+            ./envsetup.sh
+            '''}
+        }
         
         stage ('Test'){
                 steps {

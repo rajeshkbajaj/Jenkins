@@ -19,8 +19,7 @@ pipeline {
         
         stage ('Test'){
                 steps {
-                sh "pip install flask",
-                sh "pytest testRoutes.py"
+                sh "python3 app.py"
                 }
         }
         

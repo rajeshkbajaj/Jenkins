@@ -16,20 +16,28 @@ pipeline {
                 url: 'https://github.com/rajeshkbajaj/Jenkins.git'
                 }
         }
+        
         stage('Setup Python Virtual ENV'){
-       
-      steps  {
-            sh '''
-            chmod +x envsetup.sh
-            ./envsetup.sh
-            '''}
+            steps {
+                sh 'virtualenv venv && . venv/bin/activate && pip install -r requirements.txt && python3 app.py'
+            }
         }
         
-        stage ('Test'){
-                steps {
-                sh "python3 app.py"
-                }
-        }
+        
+//         stage('Setup Python Virtual ENV'){
+       
+//       steps  {
+//             sh '''
+//             chmod +x envsetup.sh
+//             ./envsetup.sh
+//             '''}
+//         }
+        
+//         stage ('Test'){
+//                 steps {
+//                 sh "python3 app.py"
+//                 }
+//         }
         
 //         stage ('Clean Up'){
 //             steps{

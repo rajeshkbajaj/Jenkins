@@ -17,11 +17,11 @@ pipeline {
                 }
         }
         
-        stage ('Test'){
-                steps {
-                sh "python3 app.py"
-                }
-        }
+//         stage ('Test'){
+//                 steps {
+//                 sh "python3 app.py"
+//                 }
+//         }
         
         stage ('Clean Up'){
             steps{

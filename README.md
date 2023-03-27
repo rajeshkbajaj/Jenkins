@@ -5,7 +5,7 @@ Flask is a web application framework written in Python and it is designed to mak
 
 created a flask application and verified same on browser under localhost port no 5000
 
-pushed the flask application to github and crated a jenkins file for build, test and deploy to Docker hub
+Uploaded the flask application to github repository (SCM) and crated a jenkins file to build, test and push the application to Docker hub and then deploy on local kubernetes server(Minikube) using deployment and service ymal files.
 
 
 ![image](https://user-images.githubusercontent.com/98638681/227800333-99f9d34b-5007-40ae-a171-8fe752909f1a.png)
